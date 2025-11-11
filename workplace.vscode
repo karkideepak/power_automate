@@ -1,3 +1,6 @@
 func init EmailParserApp --python
    cd EmailParserApp
    func new --name ExtractEmail --template "HTTP trigger"
+
+func azure functionapp publish <FunctionAppName>
+
