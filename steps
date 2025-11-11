@@ -1,0 +1,42 @@
+##Step 1: Create a Power Automate Flow to Extract .eml Files
+Actions:
+
+Trigger: Use "When a new email arrives (V3)" from Outlook connector.
+Get Email: Add "Get email (V2)" to retrieve full message details.
+Get Attachments: Use "Get attachments" to extract .eml files.
+Create File: Save the .eml file to OneDrive, SharePoint, or Azure Blob Storage.
+
+
+##Step 2: Create an Azure Function App
+In Azure Portal:
+
+Navigate to Function App > Create.
+Choose:Runtime stack: Python
+Region: Closest to your users
+Storage: Create or use existing
+Deploy the app.
+In Visual Studio Code:
+
+Open VS Code and install Azure Functions extension.
+Create a new workspace:
+Write Python code to parse .eml files.
+Deploy:
+
+
+##Step 3: Python Code to Parse .eml
+
+##Step 4: Integrate Azure Function with Power Automate
+Actions:
+
+HTTP: Call the Azure Function with .eml file content.
+Compose: Format the request body
+Parse JSON: Use schema from Azure Function response.
+Store or Display: Save parsed data or show in Power Apps
+
+
+##Step 5: Power Apps Integration
+
+Create a Power App to trigger the flow.
+Pass Message ID or email metadata.
+Display extracted subject, sender, and attachments.
+
